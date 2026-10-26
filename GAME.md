@@ -15,7 +15,8 @@ A tiny roguelike shooter inspired by 向僵尸开炮. One screen, mouse only, ~3
 - **Lose:** HP reaches 0. Zombies that reach the player line deal 10 damage and die.
 
 ## Controls
-- **Press and drag anywhere**: move the player horizontally, following the finger/mouse x position.
+- **Desktop**: the cannon follows the mouse pointer left/right (no button needed).
+- **Touch**: drag a finger; the cannon follows it.
 - That is all. Shooting and picking up gems are automatic.
 
 ## Screen (390 × 700, portrait)

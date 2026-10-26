@@ -181,10 +181,9 @@ class Game:
     def update(self, dt):
         self.time += dt
 
-        # drag with mouse (and touch)
+        # the cannon follows the mouse pointer (on a phone: follows the finger)
         mx = pygame.mouse.get_pos()[0]
-        if pygame.mouse.get_pressed(3)[0]:
-            self.px = max(25, min(W - 25, mx))
+        self.px = max(25, min(W - 25, mx))
 
         # auto fire
         self.fire_timer += dt
@@ -291,7 +290,7 @@ class Game:
             screen.blit(panel, (0, 200))
             screen.blit(big.render("ZOMBIE CANNON", True, YELLOW),
                         (W // 2 - big.size("ZOMBIE CANNON")[0] // 2, 220))
-            screen.blit(font.render("Drag to move. Shooting is automatic.", True, WHITE),
+            screen.blit(font.render("Move the mouse (or finger) to aim.", True, WHITE),
                         (30, 290))
             screen.blit(font.render("Tap to start", True, GREEN), (150, 340))
             return
